@@ -1,0 +1,179 @@
+Agenda :
+--------------
+Shell scripting 
+
+What is shell :
+-----------------
+A shell is special user program which provide an interface to user to use operting system services.
+-> Shell accept human readable commands from user and convert them into something which kernal can understand.
+->It is command lang interpreter that execute commands read from input devices such as keyboards or from files.
+->The shell gets started when the user logs in or start the terminal.
+
+In Lang 3 Types :
+--------------------
+1.Programming Lang
+2.Scripting Lang
+3.Markup Lang
+
+
+Kernal :
+------------
+Kernal is core part of Liunx Operting System It will handle
+File managment
+Memory Management
+Disk utility
+Network Management
+Handling Input and Output 
+
+Types of Shell :
+---------------------
+1.BASH shell - Bourne Again shell 
+2.CSH -C shell 
+3.KSH -Korn shell
+
+1.BASH shell - Bourne Again shell 
+------------------------------------
+Bash is the Default Shell of linux Operting System.
+
+2.C Shell :
+-------------
+When we want to Perform The task on C or c++ Then better to use C shell.
+
+3.Korn Shell :
+-------------------
+When Your Performing a Adavnce Then better to use Korn shell.
+
+Uses Of Shell scripting :
+------------------------------
+-> Shell scripting Is used to Get Routine Backups by admins.
+->They are easier to write And debug than other programming Lang like c or c++.
+-> We can Transfer The shell script to other UNIX and similar Operting Systems and Execute.
+
+-> Shell Scripts Are also used to Monitor Systems Regularly.
+
+Steps to Write a Shell Script :
+-------------------------------------
+Step 1 : Create a file with .sh Extenstion.
+
+Syntax : touch File.sh
+
+Step 2 : Edit the File by using Editors.
+
+syntax : vi/nano/vim file.sh
+
+step 3 : To execute the shell scripts 
+
+syntax : sh file.sh
+
+Vi editor :
+-----------------
+vi file.sh : it will open Terminal 
+
+i : To insert the data(change mode)
+
+To save : esc shift + :wq
+
+Example :
+--------------
+touch file1
+
+ls 
+
+pwd
+
+2nd Example :
+------------------
+nano date.sh
+
+#!/bin/bash ( Just to indict we are using bash shell)
+
+date >> output.txt
+
+------------------------------------------------------
+I want to execute the same file each and every minute 
+
+To Execute that we need to apply the cronjobs .
+
+Cronjobs :
+----------------
+Cronjobs are used to Schedule the jobs .
+
+To Perform the Routine tasks we need to Shedule the jobs.
+
+Backups and Logs.
+
+To Configure the cronjobs :
+--------------------------------
+Step 1 : Edit the crontab file
+
+crontab -e 
+
+syntax : * * * * * /file-path
+
+1st * : Minutes
+2nd * : Hours
+3rd * : Date
+4th * : Month of the year
+5th * : Day of the week
+
+Example : * * * * * /root/date.sh
+
+Step 2 : We need to provide the execution Permission to date.sh file.
+
+chmod 777 date.sh
+
+Step 3 : We display the cronjobs 
+
+crontab -l
+
+Step 4 : To Display the output 
+
+tail -f output.txt
+
+To Exit ctrl+c
+
+Each and every 2min i want to excute the file
+----------------------------------------
+step 1 : 
+
+nano cron.sh
+
+#!/bin/bash
+
+date >> date.txt
+
+Step 2 :
+------------------
+crontab -e 
+
+*/2 * * * * /root/cron.sh
+
+Step 3 : To check the cronjobs 
+
+crontab -l
+
+Step 4 : Provide a Execution permission to cron.sh file 
+
+chmod 777 cron.sh
+
+Step 5 : tail -f date.txt
+
+Assignment :
+--------------
+At 5PM you need to trigger the cronjob 
+
+5 AM: 5
+5 Pm : 17
+
+
+
+
+
+
+
+
+
+
+
+
+ 

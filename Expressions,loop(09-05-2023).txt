@@ -1,0 +1,254 @@
+Agenda :
+----------
+1.Variables
+2.Expressions
+3.Looping Statements
+
+Steps to write a shell script :
+----------------------------------
+Step 1 : touch file.sh
+
+step 2 : nano file.sh 
+
+         #!/bin/bash
+
+step 3 : sh file.sh 
+
+
+By using Cronjobs :
+---------------------
+step 1 : crontab -e 
+ 
+         * * * * * /path/file.sh
+        
+1st * : min
+2nd * : Hour
+3rd * : day 
+4th * : Month of the year
+5th * : Day of the week  
+
+step 2 : crontab -l 
+
+step 3 : chmod 777 file.sh
+
+step 4 : tail -f abc.txt
+
+Step 5 : crontab -r --To remove the cronjobs.
+
+---------------------------------------------
+Variables :
+--------------------
+Variables are named memeory alocation which is used to store the value and it can be changed n number of times during the exection.
+
+Bottle : water 
+
+#!/bin/bash
+a=10
+echo $a
+
+$ : Is used to call the variable.
+
+Types of variables :
+-----------------------
+1.System Defined Variables
+2.Environment Variables
+3.User defined variables 
+
+1.System defined variables :
+---------------------------------
+Always we need to call System defined  varibles in capital letters.
+
+Example :
+-------------
+echo $PWD
+echo $OSTYPE
+echo $HOSTNAME
+
+Environment Variables :
+-------------------------
+PM : Entire India 
+CM : They can rule only state
+
+Pm : Global 
+cm : local 
+
+Readonly 
+unset
+
+Readonly :
+-------------
+#!/bin/bash
+
+x=5
+echo $x
+readonly x
+x=10
+
+Unset :
+------------
+z=4
+echo $z   #4
+unset z
+echo $z   #--
+
+User Defined Variables :
+----------------------------
+#!/bin/bash
+age=25
+name=qspiders
+echo my name is $name and age $age
+
+#!/bin/bash
+
+age=18
+vote=10thmay
+echo to vote on $vote age should be $age
+
+Expressions :
+----------------
+Expressions are combination of Operaters and Operands 
+
+Arthmetic opertores :
+-----------------------
++
+-
+*
+/
+
+Example : a + b 
+
+Relational opertores :
+---------------------------
+Equlas = -eq
+Not Equals = -ne
+Less than = -lt
+Less than or equals to = -le
+Greater than = -gt
+Greater than or equals to = -ge
+
+Arth operations :
+--------------------
+#!/bin/bash 
+x=10
+y=20 
+z=$(($x + $y))    #O/p will store in z 
+echo $z
+
+or 
+
+#!/bin/bash
+a=5
+b=10
+c=`expr $a + $b`
+echo $c
+
+Looping :
+---------------
+used to perform the repetative task.
+
+1.While loop
+2.For loop
+3.Until loop 
+
+1.While loop :
+
+Syntax :
+
+while [[ condition ]]
+do 
+commands
+done
+-------------------
+a=1
+while [[ $a -le 10 ]]     
+do 
+echo $a
+((a++))
+done 
+
+#By using while loop Print the table
+
+a=1
+n=2
+while [[ $a -le 10 ]]
+do
+echo `expr $a \* $n`
+((a++))
+done
+
+For loop :
+--------------
+Based on the range it will perform.
+
+Syntax :
+-----------
+for in {condition}
+do 
+Commands
+done
+
+a= 1 2 3 4 5 
+
+a in 1 2 3 4 5 
+
+--------------------
+#!/bin/bash
+for a in 1 2 3 4 5 
+do
+echo $a
+done
+
+#!/bin/bash
+for a in {1..10}
+do
+echo $a
+done
+
+until loop :
+----------------
+Until will Execute the loop until the condition gets true .
+
+Until will execute the condition if the condition is false 
+when condition becomes true it will terminate the loop.
+
+syntax : 
+
+until [[ condition ]]
+do
+command
+done
+
+Example :
+--------------
+a=1
+until [[ $a -eq 6 ]]
+do
+echo $a
+((a++))
+done
+
+o/p 
+1
+2
+3
+4
+5
+6=6 true ( It will terminate the loop)
+
+Assignment :
+------------------
+1. 5 Examples on Expressions(+,-,*,/)
+
+Perform the execution on all relational operatores
+
+1.while : -eq,-ne,-ge,-gt,-lt
+2.for : 3 Examples and print the tables
+3.Until : -eq,-ne
+
+
+
+
+
+
+
+

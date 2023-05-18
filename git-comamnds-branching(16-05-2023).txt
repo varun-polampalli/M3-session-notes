@@ -1,0 +1,177 @@
+Git repository Consist of 4 Parts :
+----------------------------------------
+1.Working Directory
+
+touch file1 
+
+2.Stagging area
+
+To add a file from working directory to stagging area
+
+git add <file-name> or git add . or  *
+
+3.Local Repository
+
+To add a file from staging area to local repo(.git) 
+
+git config --global user.name "user-name"
+
+git config --global user.email "user-email"
+
+git commit -m "msg"
+
+4.Remote Repository
+
+First we need to check whether local repo is connected with remote repo or not.
+
+git remote -v
+
+git remote add origin https://github.com/varun-polampalli/m3.git
+
+To add a local changes to remote : git push origin <branch-name>
+
+
+Git commands :
+------------------
+1.git init : Is used to create a repository from local system.
+
+syntax : git init <repo-name> or git init 
+
+If i want to create a new repo : git init <repo-name>
+
+I have directory : git init  
+
+2.git status : it is used to display whether file is under tracking or not 
+or
+To display the current status of git repo.
+
+3.git add file-name or . or * : To add a file to staging area.
+
+4.git commit -m "msg" : to Store the file in local repo and record the changes.
+
+5.git log : To display the commits/records
+
+6.git remote -v : to check whether local repo is connected with remote repo or not.
+
+7.git remote add origin <url> : To add a local repo to remote repo (to connect local and remote repo).
+
+8.git push : To add a local changes to remote .
+
+git push origin <branch-name>
+
+9.git fetch : To get a changes information  from remote repo 
+
+git fetch origin <branch-name>
+
+The informarion is stored in : .git/FETCH_HEAD
+
+10.git pull : To  copy/download the remote changes to local .
+
+git pull origin <branch-name>
+
+To access a remote repository/Working with repo 
+
+2 ways :
+---------
+1.git init 
+
+2.git remote add origin url
+
+ii)create a repo in remote 
+
+git clone <url>
+
+-------------------------------------------------
+1.git clone : To download/copy the remote repository to local.
+
+git clone <url>
+
+Branching :
+-------------------
+Branch : In git , a branch us a new/separate version of the main repository.
+
+-->Sectors of repository.
+
+
+Lets say you have a large project, and you need to update the design on it.
+
+multiple dev
+
+----------------------------------
+1.git branch : To list the branches.
+
+2.git branch <branch-name> : To create a branch.
+
+3.git checkout <branch-name> : To change a branch/switch.
+
+or 
+
+git switch <branch-name> 
+
+--------------------------------------------------
+Note : All the parent branch(master) content will copied to child branch(feature).
+---------------------------------------------------
+Note :
+--------
+HEAD : Indicating Recent commit .
+
+2-way/Fast forward merge:
+---------------------------------
+To add a child branch changes to parent branch.
+
+git merge <child-branch> : We can merge the parent and child branch.
+
+git branch : List the braches
+
+git branch <branch-name> : To create a new branch.
+
+git checkout <branh-name> : To switch brnahes.
+
+git merge <branch-name> : to add a changes from one branch to another.
+
+git branch -D <branch-name> : To delete a branch.
+
+-----------------------------------------------------
+git init <repo-name> : To create a git local repo.
+
+git add <file> or . : to move the file from working directory to stagging area.
+
+git config --global user.name 
+
+git config --global user.email
+
+git commit -m "msg" : To add a file from staging area to local repo(to store the versions)
+
+git log : Diplay the records/commits
+
+git remote -v : To check whether local repo is conencted with remote repo.
+
+git remote add origin <url> : To connet local repo to remote.
+
+git push origin <branch-name> : To add a local changes to remote.
+
+git fetch origin <branch-name> : To get a information from remote repo.
+
+git pull origin <branch-name> : To download/copy the remote changes to local.
+----------------------------------------------------
+
+Manger url :
+------------------
+git clone <url> : To download the Repository to local.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

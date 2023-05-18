@@ -1,0 +1,138 @@
+Agenda-17-05-2023
+----------------------
+1.Stash
+2.Reset
+3.Revert
+4.tag
+5.rebase
+6.Cherry-pick 
+
+Head : It is indicating Recent commit.
+
+1.git show <commit-Id> : To display the information about commit.
+
+1.Reset :
+---------------------
+Reset is used to undo the task.
+2 uses
+
+1.To remove the files from stagging area
+
+2.To remove the commits 
+
+i)Reset files :
+-----------------
+file1,file2,file3,file4
+
+git add .
+
+git reset <file-name>
+
+When we execute git reset file-name it will add the file bask to working directory from staging area.
+
+2 nd use of git reset is to remove the commits :
+-------------------------------------------------
+By mistikaly i have added some commits after i reliase then i want to remove the commits.
+
+1.git reset head~num : Remove the commit and add that changes back to working directory.
+
+2.git reset --soft head~n : It will remove the commits and it will add files back to staging area.
+
+3.git reset --hard head~n : It will remove the commits and 
+changes will be permanenetly deleted.
+
+--soft : local repo --staging area
+
+git reset head~n(--mixed) : Local repo --> Working dir
+
+--hard : local --> Permanently removed.
+
+Drawbacks of reset :
+------------------------
+1.We can't delete the speific/particular commit, in reset it will remove the number of commits.
+
+To overcome the drawbacks of reset we are having revert.
+
+Git revert :
+-----------------
+By using revert we can undo the task and that revert information is also stored in commits.
+
+--> By using this we can remove the particular commits.
+
+syntax : git revert <commit-id>
+
+
+Git stash :
+----------------
+Master --> mukti TE (Testing) 
+singup -> smit --no no i am not availble.
+login -> yogesh - ask yogesh to fix the issue.
+
+Without compliting the task i will not commit the chages.
+mobile : alpa
+
+Stash : Is used to store the chages in temp location.
+
+Working with stash :
+------------------------
+step 1 : Create a 2 branches with the name of singup and login 
+
+stash : Add the changes to temp location
+
+commit : Add the changes permnently .
+
+Note : After adding the file to staging area if you want to store the file for temp then execute git stash.
+
+ syntax : git stash
+
+Git tag :
+----------------
+Tagging the important checkpoints.
+
+100 commits 
+
+To make search easier
+
+To mention the person 
+
+cart : last --add mention any names.
+
+2 Types of tags :
+----------------------
+1.Light weight tag
+
+syntax : git tag <tag-name> <commit-id>
+
+Example : git tag smit-edited 37d4024 
+
+-->I want to push the tags to remote repository.
+
+git push origin <branch-name> --tags
+
+2.Annotated Tag 
+
+syntax : git tag -a <tag-name> <commit-id> -m "msg"
+
+To push tags to remote : 
+
+git push origin <branch-name> --tags 
+
+To display the tag information :
+-----------------------------------
+git show <tag-name>
+
+
+Assignment :
+-------------------
+1.what is git & Use of git
+2.What is version control system and types? examples for vcs
+3.git basic commands
+4.Diff between git init and clone
+5.Diff between git fetch and pull
+6.diff Between git pull and push 
+7.Diff between git commit and git stash
+8.diff b/w git reset --soft,git reset --mixed and git reset --hard
+
+
+
+

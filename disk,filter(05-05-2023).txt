@@ -1,0 +1,205 @@
+Agenda :05-05-2023
+-----------------
+1.Disk Utility
+2.Filter Commands
+
+File Permissions :
+-----------------------
+Owner
+Group
+Others
+
+Read
+write
+Execute
+
+chmod 777 File-name
+
+1st 7 : owner
+2nd 7 : Group
+3rd 7 : Others
+
+read : 4
+Write : 2
+Execute : 1
+
+-----------------------------------------------
+File Compression :
+----------------------
+1.tar (Tape Archive)
+2.Zip
+3.gzip
+
+1.Tar :
+
+compress : tar cvf file.tar file1 file2 file3
+
+Extract : tar xvf file.tar 
+
+c: create
+v: Verbose
+f: file
+x: Extract
+
+2.Zip : 
+
+Compress : zip file.zip file1 file2 file3
+
+Extract : unzip file.zip
+
+3.gzip :
+
+Compress : gzip file1 file2 file3
+
+Extract : gzip -d file1.gz file2.gz file3.gz
+
+---------------------------------------------------
+Input,Output And Error Redirection :
+----------------------------------------------
+1.Standard Input: <
+
+cat < file 
+wc < file
+
+2.Standard Output : > or >>
+
+> : overwrite
+>> : Append (Store old data along with new data)
+
+echo "hello world" >> output.txt
+
+3.Error Redirection : 2>
+----------------------------
+la 2> error.txt
+==================================================================
+05-05-2023
+--------------
+1.Disk Utility :
+------------------
+Play store : App -- Storage space enough
+
+Settings : Storage  
+
+Linux : Error Message Storage space is Enough 
+
+To get a information about memory or storage space :
+
+1.df : To display the information about disk space.
+
+2.df -h : To display the disk free information in Human Readable Formate.
+
+3.fdisk : To Display the information about fixed disk 
+
+4.parted -l : To Display the Information about Partions 
+
+Filter Commands :
+-----------------------
+Filter the information or To display the particular data or to find the specific information.
+
+University : Colleges : Branches : Students 
+
+Manoj : BE : cs
+
+1.Head : By using this we can display the starting lines of file.
+
+Syntax : head <file-name> : By default it will print 10 lines and it will count from 1st line
+
+         head -n 5 <file-name> : To display the specified number of lines.
+
+         head -c 10 <file-name> : To display the specified number of char.
+
+2.tail : To display the lines of file and to count from last line. 
+         
+syntax : tail file-name : Default 10 lines 
+
+         tail -n <num> : Display Specified number of lines.
+
+         tail -c <num> : Display the specified number of char .
+
+3.| (Pipeline) : By using this we can execute multiple commands and for filter.
+
+Syntax : command1 | command 2 | command 3 | command 4
+
+ls | head -n 4 <file> | tail -n 2  
+
+1st commands output will be pass as an input to 2nd command and 
+2nd commands output will be pass as an input to 3rd command
+
+
+Example : head -n 6 student.txt | tail -n 2 
+
+          tail file-name | head -2 
+
+
+4.sort : To display the output in ascending or Descending 
+
+Syntax : asc -- sort <file-name>
+
+         des -- sort -r <file-name>
+
+
+5.wc : To dispaly the information about Word Count 
+
+syntax : wc <file-name>
+ 
+         wc -l <file-name> : Number of lines
+
+         wc -w <file-name> : Number of words
+
+         wc -c <file-name> : Number of characters
+
+6.uniq : To display the uniq information or To avoid the duplicate data.
+
+syntax : uniq <file-name>
+
+         uniq -c <file-name> : To count the occuarnce.
+ 
+         uniq -d <file-name> To display the duplicate content. 
+         
+7.find : To find the file/dir.
+
+syntax : find <file/dir> 
+
+8.grep : Group Regular Expression 
+
+To display the specific content of the file.
+
+syntax : grep <option> <file-name>
+
+Example : grep smit student.txt
+
+9.sed : Stream editor 
+
+By using this we can replace the data from the file.
+
+syntax : sed 's/old/new/' file-name
+
+Example : sed 's/cs/ec/' student.txt
+
+To print the replaced data line :
+
+sed 's/old/new/p' file-name
+
+To change the specific line 
+
+sed '3s/old/new/p' file-name
+
+To apply the changes to original file 
+
+sed -i 's/old/new/' file-name
+
+10.awk :gnu awk
+
+syntax : awk '/option/' {print}' file-name
+
+Example : awk '/Thaeeris/' {print}' student.txt
+
+Assignment :
+----------------
+use of command
+syntax 
+Example 
+
+vgpolampalli@gmail.com
+onlinebatchs@gmail.com
+

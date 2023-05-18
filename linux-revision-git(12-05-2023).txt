@@ -1,0 +1,247 @@
+Agenda : 12-05-2023
+------------------------
+1.Revison of linux commands 
+2.Git
+
+Linux commands :
+----------------------
+1.sudo su - : To login as a root user.
+2.touch : Create a files
+3.mkdir : To create a directory.
+4.ls : List the files and dir.
+5.cd : To change directory.
+6.Editors : vi/vim/nano
+7.cat : Display the content of file.
+8.cp source destination : To copy
+9.mv src dest : To move
+10.rm : Remove the files.
+11.rm -f : Forcefully
+12.rmdir : TO delete empty dir.
+13.rm -rf Dir : To delete non-empty dir.
+14.25-jan-1950 : cal 26 jan 1950 
+
+cal mon
+cal mon yyyy
+cal dd mon yyyy
+
+15.date : TO display the date.
+16.whoami : To display the username.
+17.pwd :  To display the present working directory.
+18.cd .. : Switch to previous dir(One step)
+
+19.uname : Information about system.
+   uname -m :  Machine name 
+   uname -v :  version 
+   uname -r : Release.
+   uname -a : To display all the system and kernal information.
+   uname -o : To display the information about os.
+
+20.useradd : To create a user.
+21.passwd <user-name> : To set password to user.
+22.cat /etc/passwd : TO display the user-file.
+23.su - username : To login as a user.
+24.exit : To logout.
+25.userdel <user-name> : To delete the user.
+
+26.groupadd : To create a group.
+27.cat /etc/group : To display group file.
+28.usermod -a -G Groupname user-name : To add a user into group.
+29.gpasswd -d user-name group-name : To remove the user from group.
+30.getent file : To display the content of file.
+31.groupdel : To delete the group .
+
+File management :
+------------------
+1.user/groups : owner,group and others.
+2.Types of file permissions : Read,write and execute.
+
+32.chmod 777 file-name : To change the permission of file/dir.
+
+1st 7 : Owner.
+2nd 7 : group.
+3rd 7 : others.
+
+chmod 643 file : 
+
+owner : Read and write
+Group : Write.
+others : Write and execute.
+
+ls -l : To diplay the long list.
+
+- : file/dir 
+--- : owner (RWX)
+--- : Group (RWX) 
+--- : Others (RWX)
+
+33./bin : Binary/execuatble files.
+34./etc : Configuration files.
+35./opt : It is dedicted for installtaion .
+36./home : User directorys.
+37./tmp : Temporavery storage files.
+
+File Extraction/Compression :
+---------------------------------
+38.Tar :
+
+ compress : tar cvf file.tar file1 file2 
+ Extract : Tar xvf file.tar 
+
+39.zip : 
+
+ compress : zip file.zip file1 file2  
+ Extract : unzip file.zip 
+
+40.gzip : To Compress individual files.
+
+  Compress : gzip file1 file2 
+  Extract : gzip -d file1.gz file2.gz 
+--------------------------------------------------------------
+Input,output and Error Redirection :
+----------------------------------------
+1.Input : <
+cat < file 
+
+2.Output(stdout) : >
+
+echo hello world >> output.txt 
+
+> : Overwrite
+>> : Append 
+
+3.Error (stderr) : 2>
+
+zcho 2> file.txt 
+
+-------------------------------------------------
+Network Managment :
+---------------------
+1.ifconfig : To get a information about our system IP.
+2.nslookup : To display the information about domain.
+3.ping(Pocket information gropher) : To collect the information about server.
+4.netstat : .Network Statics 
+5.dig : Information about domain .
+6.host : Dns lookups 
+7.last : Login informtion.
+
+Disk utility :
+--------------------
+1.parted -l : To display the information about partitions .
+2.du : Disk usage .
+3.du -h : To display the disk usage in human readable formate.
+4.fdsik -l : Information about fixed disk.
+5.top : Background running process.
+ 
+FIlter commands :
+------------------------
+1.head : To display the information about top 10 lines .
+   
+  head -n : To display the n number of lines . 
+  head -c : To display the n number of characters.
+
+2.Tail : It will count from last line and display 10 lines .
+ 
+  tail -n : N number of lines .  
+  tail -c : N number of characters.
+
+3.| :To use multiple commands and pass a input of 1st cmd to 2nd .
+
+Example : head file | tail -n 
+
+4.uniq : To display uniq information.
+
+5.sort : Output in asc or desc.
+      
+         sort : Asc  
+         sort -r : Dis
+  
+6.sed : Stream editor 
+
+To replace the data or to edit the file.
+
+Syntax : sed 's/old/new/p' file
+         sed 'ns/old/new/p' file 
+         sed -i 's/old/new/' file : To inset the changes in files.
+
+7.grep(Group Regular Expression) : To search a data.
+
+8.find : To find the file/dir..
+
+9.awk : it is also similar to sed command by using this we can replace the data. 
+
+--------------------------------------------------------------
+5 developers :
+
+smit,yogesh,mukti,manoj,thaeer.
+ap    kar    mp    ap     ap 
+
+skillrary
+---------------
+singup : 
+login :
+search : 
+Manoj : Assessment 
+Thaeer : Notes .
+
+Completed the task : 
+
+All the source code and Track each and everyone.
+
+From scratch to track : Git 
+
+Git :Global information Tracker 
+-------------------
+Git is a Distrubuted version control system.
+
+Version control system:
+------------------------------
+Version control system are used to track the versions and store the data in versions. by using this easily we can rollback.
+
+Whatsapp : chats -v1
+           chats,calls -v2
+           chats,calls,status -v3
+           chats,calls,status,payment -v4
+
+Types of version control system:
+------------------------------------
+1.Local 
+2.Centarilsed 
+3.Distributed.
+
+Git is developed by Linus Torvlads 
+----------------------------------------------------------------
+
+Git Terminolgys :
+-----------------
+1.Repository : It is similar to directory.
+2.Push : TO add a local chages to remote.
+3.Pull : To download/copy the remote changes to local.
+4.fetch : To get a information about the chnages from remote to local
+5.Remote : Repository hosting platforms .
+
+github.gitlab,bitbucket
+
+6.clone : To download the Remote Repository to local.
+7.add : To add a changed to git.
+8.commit : To store the changes as a records(and add a message)
+9.fork : To copy the entire repository in remote repo.
+10.Branches : Branches are nothing but different Working location for each and every developers/users.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
