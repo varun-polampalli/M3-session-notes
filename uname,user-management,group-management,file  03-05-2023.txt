@@ -1,0 +1,200 @@
+Agenda : 03-05-2023
+----------------
+1.Revise 
+2.Uname
+3.User management
+4.Group Management
+5.File Management
+
+
+Basic commands :
+-----------------------
+1.sudo su - : To switch as a Root user.
+
+2.mkdir : To Create a directory.
+
+3.ls : list
+
+4.cd : Change Directory.
+
+5.pwd : Present Working Directory.
+
+6.touch : It is used to create a files
+
+7.Editors : vi,nano,vim
+
+8.cat : Used to display the content of file.
+
+9.cp : To copy the data from one location to another location
+
+syntax : cp <source> <destination>
+              copy       paste
+
+10.mv : It is used to move the data 
+
+syntax : mv <source> <Destination>
+
+11.rm : Is used to remove the files
+
+rm 
+rm -f
+rm *.txt
+
+12.rmdir : To delete the empty directory 
+
+   rm -rf : To delete non empty directory .
+
+13.cal :  Cal is used to display the calendar.
+
+cal
+
+cal mon
+
+cal mon yyyy
+
+cal dd mon yyyy 
+
+15 aug 1947
+
+cal 15 aug 1947 
+
+14.date : To display the date and time .
+
+syntax : date 
+
+------------------------------------------------------------------------
+
+10 files in a single shot 
+
+touch file{1..10}.txt
+----------------------------------------------------------------------------
+
+uname : Is used to display the information about our system
+
+1.uname : 
+
+2.uname -m : To diaply the machine name.
+
+3.uname -v : Is used to display the version
+
+4.uname -r : To display the Release information 
+
+5.uname -o : To display the information about operting system
+
+6.uname -a : To display all the above information.
+
+-----------------------------------------------------------------------------------
+User Management :
+----------------------
+Linux is a multi user and multi tasking operting system.
+
+IAM : users and based the user role will attach a permissions 
+
+Dev1 : Using a A1 system ---Morning shift
+
+Dev2 : Using a A1 system ---Night shift
+
+Admins : 
+
+-----------------
+1.useradd : Is used to create a user.
+
+syntax : useradd <user-name> or adduser <user-name>
+
+2.passwd : To attach a password to user (To secure the user).
+
+syntax : passwd <user-name>
+
+3.cat /etc/passwd :(userfile) To verify whether user is created or not.
+
+4.su - <user-name> : To login as a user
+
+syntax : su - <user-name>
+
+5.whoami : To display the user name.
+
+6.exit : To logout as a user.
+
+7.userdel : Is used to Delete the user.
+
+syntax : userdel <user-name>
+
+Note : When we create a user with the name of user one directory will be created in /home directory .
+
+2.When we create a user by defualt on group will be created with a user name.
+
+-------------------------------------------------------------------------
+Group Management :
+--------------------------
+By using group management easily we can track each and every user 
+
+1.Easliy we can attach a permissions to the group.
+
+Dev : Developers will be there
+
+Test : TE will be there
+
+DevOps : DevOps eng will be there
+
+------------------------
+1.groupadd : Is used to create a Group
+
+syntax : groupadd <group-name>
+
+2.cat /etc/group : To display the group file.
+
+3.To add a user into group :
+
+syntax : usermod -a -G <group-name> <user-name>
+
+Example : usermod -a -G skillrary DevOps
+
+4.To Remove a user from group .
+
+syntax : gpasswd -d <user-name> <group-name>
+
+Example : gpasswd -d DevOps skillrary
+
+5.groupdel : To delete a group 
+
+syntax : groupdel <group-name>
+
+6.getent : It is used to display the content of the file.
+
+syntax : getent <file>
+
+Example : getent group 
+
+          getent passwd
+
+
+File Management :
+-------------------------
+Windows : C folder all the configurtion Related files will be stored
+
+Linux : / System information 
+
+/ : /bin
+    /etc
+    /home
+    /opt
+    /tmp 
+
+1./bin : In this directory all the binary files are stored.
+
+2./etc : In this Directory all the system configurtion files are stored.
+
+3./opt : It is dedicated for installing 3rd party applications.
+
+4./home : In this directory all the user Directory are stored.
+
+5./tmp : Tmp files are stored.
+
+
+
+
+
+
+
+
+

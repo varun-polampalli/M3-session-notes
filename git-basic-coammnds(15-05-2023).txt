@@ -1,0 +1,130 @@
+Git (Global information tracker) :
+--------------------------------------
+Git is a Distributed Version control system
+Git is a source code management tool.
+
+Repository :
+--------------------
+Repository consist of 4 parts
+
+1.Working Directory 
+2.Stagging area
+3.Local repository 
+4.Remote Repository
+
+Remote Repository :
+------------------------
+Repository hosting platforms .
+
+github
+bitbucket
+gitlab 
+
+github:
+----------
+Github is a one the repository hosting platform owned by Microsoft organisation.
+
+Commands :
+--------------------
+1.git init : It is used to create a git local repository.
+
+syntax : git init <repository> or git init.
+
+2.git add <filr-name> or git add . or git add * 
+
+To add a files from working directory to staging area.
+
+3.git config --global user.name "user-name" : To configure user.
+
+4.git conif --global user.email "user-email" : To configure user mail.
+
+5.git commit -m "msg" : To store a code from staging area to local repo.
+
+6.git status : To check the current status of repository.
+
+7.git log : To display the records .
+
+8.git remote -v : To check whether our local git repository is connected with git remote repository or not.
+
+9.git remote add origin <github-repo-url> : 
+
+Steps to create a repository in repositroy hosting platfotm github :
+--------------------------------------------------------------------
+step 1 : open github.com
+
+step 2 : Click on + drop down and choose new repository.
+
+step 3 : Enter the name for repository and choose public.
+-------------------------------------------------------------------------
+
+We need to connect git local repository to remote 
+
+9.git remote add origin <github-repo-url> : 
+
+Example : git remote add origin https://github.com/varun-polampalli/m3-demo.git
+
+dns - domain:ip
+      name : url 
+
+10.Now i want to add a local changes to remote.
+
+git push origin <branch-name>
+
+
+Note : 
+--------------
+.git is a local repository of  git repository .
+
+Working with git :
+--------------------------
+Step 1 : To create a git repistory in local system 
+
+git init <repo-name> or git init 
+
+1.Working Directory :
+--------------------------
+touch singup 
+
+git status : To check whether  the is under tracking or not.
+
+---------------------------------------------------------------
+2.Stagging area
+
+To add/move the files from working directory to staging area
+
+git add file or git add . or * 
+------------------------------------------------------------------
+
+3.Local repository 
+--------------------------
+After add a files from staggin area to local repository. 
+
+to record or to add a files from staging area to local repo.(.git)
+
+git commit -m "msg"
+
+To configure user-name and mail id
+
+git config --global user.name "user-name"
+git config --global user.email "email-id"
+
+To check whether user name and mail id are configured or not .
+
+git config --global user.name
+
+git config --global user.email
+
+git log : To display the records.
+
+4.Remote Repository
+
+git remote -v : To check whether local system is connected with remote repo.
+
+git push origin <branch-name> : To connect local repo to remote repo.
+
+
+
+
+
+
+

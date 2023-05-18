@@ -1,0 +1,157 @@
+Linux
+
+Operting system :
+---------------------
+Operting system is a type of system software.
+
+Operting system is an interface between computer user and computer hardware.
+
+Types of Operting system :
+-------------------------------
+1.Windows
+2.MAC OS
+3.Linux
+4.Blackberry
+5.Ubuntu
+6.centos
+7.Kalilinux
+8.Fedora
+9.Open suse
+
+Diff between Linux and Windows:
+-------------------------------------
+1.Linux : Free and Open source
+
+Windows : Windows is Paid version
+
+2.Linux : Linux is virus and malware free
+
+Windows : Chances of Virus attack
+
+3.Linux : Linux is higly secure
+
+Windows : Chances of hack
+
+
+Linux : Source code we can modify based on our Requirement .
+
+Linux :
+------------------
+
+Evolution of Linux :
+--------------------------
+Linus Torvalds developed Kernal in the year of 1991
+in C lang.
+
+GNU+Kernal : Linux Operting system. 
+
+GNU : Free Software foundation
+
+GNU : General Public Licence non unix
+-------------------------------------------
+
+Source code of Kernal is free any one can modify and Release the software commericaly or non-Comercially under the GNU licence.
+
+Linux is multiuser and Multitasking operting system.
+
+Intially linux operting system is developed for super computers 
+TV,Dvd,Washing machines and Android mobiles.
+
+About : kernal
+
+Kernal :-
+-----------
+Kernal is a core part of Linux Operting system.
+Kernal will take care of Network Management,
+Memory Management,Process Management.Handling Input and Output management & File Management .
+
+
+Some of the organinations modifed the source code of linux operting system and developed there own operting system.
+
+Linux Distributions/Versions:
+--------------------------------
+1.Ubuntu
+2.centos
+3.Kali linux
+4.Redhat
+5.Debain
+6.Fedora
+7.Arch linux 
+
+Whatsapp : v1:- chats
+           v2:- chats,calls
+           v3:- chats,calls and status
+
+Commands :
+-------------------
+1.sudo su - : Is used to login as a Root user.
+
+super user do 
+
+2.whoami : To Display the current logged in user
+
+3.mkdir : Is used to create a Directory.
+
+Syntax : mkdir <directory-name>
+
+Windows : Folders.
+
+Linux : Directory.
+
+4.ls : Ls is used to list the current working directory.
+
+5.cd : Change directory.
+
+syntax : cd <dir>
+
+Switch to Previous directory : 
+
+syntax : cd ..
+
+6.pwd : Present working Directory.
+
+7.touch : Is used to create a Files
+
+syntax : touch <file-name>
+
+8.Editors : vi,nano,vim
+
+syntax : nano file-name
+
+Save : ctrl+s
+Exit : ctrl+x
+
+9.cat : Display the content of file.
+
+syntax : cat <file-name>
+
+10.cp : Copy the data from one file to another or one directory another directory.
+
+syntax : cp <Source> <destination>
+
+syntax : cp -r <source> <destination> : Recursively
+ 
+11.mv : To move/Transfer the data from one location to another location.
+
+syntax : mv source destination
+
+12.To Remove the file :
+
+syntax : rm <file-name>
+
+         rm -f <file-name> : Forcefully
+
+         rm *.txt
+
+13.rmdir : To Remove the directory.
+
+syntax : rmdir <dir-name> : Empty Directory.
+
+         rm -rf <dir-name> : Non empty Directory
+
+
+
+
+
+
+

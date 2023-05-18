@@ -1,0 +1,283 @@
+Agenda :11-05-2023
+-----------------
+While with read
+--------------------
+read is like a varaible by using this we can pass dynmaic values to the variable 
+
+echo "enter the values of n and a"
+read n
+read a 
+while [[ $a -le 10 ]]
+do 
+echo `expr $a * $n`
+((a++))
+done
+
+1.Conditional Statements
+2.Case-esac
+3.Functions 
+
+1.Conditional statements :
+-----------------------------
+1.if statement
+2.if-else statement
+3.else-if statement 
+
+1.if statement : if statement will execute if the condition is true then only it will execute the Block or else it will  terminate the block.
+
+syntax : if [[ condition ]]
+         then 
+           commands
+         fi
+
+Example :
+------------
+echo "enter the value of a "
+read a 
+if [[ $a -eq 5 ]]
+then
+echo a is equals to 5 
+fi
+
+echo Enter the value of number 
+read number 
+if [[ $number -le 400000 ]]
+then
+echo 0% tax 
+fi
+
+if-else :
+--------------
+if the condition is true then it will execute if block or else if the condition is false then it will execute else block.
+
+syntax : 
+if [[ condition ]]
+then 
+command
+else 
+command
+fi
+
+example :
+-------------
+read number
+if [[ $number -le 300000 ]]
+then 
+echo %0 tax
+else 
+echo 10% tax
+fi 
+
+BY using if-else check whether number is even or odd
+
+Even :
+-------
+2)4(
+  
+-----
+  0 
+
+Odd :
+-----
+2)5(
+  
+ ----
+  1
+
+Example :
+----------------
+echo "Enter the value of num"
+read num
+if [[ `expr $num % 2` == 0 ]]
+then
+echo $num is even
+else
+echo $num is odd
+fi
+
+To check the odd number :
+---------------------------
+read num
+if [[ `expr $num % 2` == 1 ]]
+then
+echo $num is odd
+else
+echo $num is even 
+fi
+
+else-if :(Condition inside condition)
+--------------
+If the condition is true then it will execute if block or it will check with another condition which we are added in else block .
+
+--> To add a multiple conditions in script.
+
+read n 
+if [[ `expr $n % 2` == 0 ]]
+then 
+echo $n is even
+elif [[ `expr $n % 2` == 1 ]]
+then
+echo $n is odd 
+else
+echo $n is factorial
+fi
+
+---------------------------------------------
+case-esac :
+-----------------
+It will execute the condition based on the pattern matching.
+
+mcq : Question 
+
+a b c d
+
+syntax :
+
+case cond in
+case 1)
+command
+;;  #break 
+
+case 2)
+command 
+;;
+
+esac
+
+Example :
+------------
+read fruit 
+case $fruit in 
+apple)
+echo $fruit is available
+;;
+mango)
+echo $fruit is available
+;;
+*)     #None of the above
+echo $fruit is not available
+;;
+esac
+
+By using case statement write a calculator script :
+-------------------------------------------------------
+echo "choose the opr"
+read opr 
+case $opr in
++)
+read a 
+read b
+echo `expr $a + $b`
+;;
+-)
+read c
+read d
+echo `expr $c - $d`
+;;
+\*)
+read a
+read b
+echo `expr $a \* $b`
+;;
+/)
+read x
+read y
+echo `expr $x / $y`
+;;
+
+*)
+echo $opr is not avaialble
+;;
+esac
+
+-------------------------------------------
+Functions :
+-----------------
+Functions are group of statements it will get execute when ever it is called or invoked.
+
+Syntax :
+--------
+function-name()
+{
+commands
+}
+
+#calling block 
+function-name
+
+Example :
+-------------
+add()
+{
+read a 
+read b
+echo `expr $a + $b`
+}
+
+sub()
+{
+read x
+read y
+echo `expr $x - $y`
+}
+
+#calling block 
+$1 
+$2
+
+#)Command line arguments :
+-----------------------------
+While execution we need to pass the value.
+
+command -- --
+$0      $1 $2
+ 
+smit()
+{
+echo "Hello sir i am smit"
+echo ${FUNCNAME}
+}
+
+manoj()
+{
+echo "hello sir i am manoj"
+}
+
+thaeer()
+{
+echo "Good morning sir i am thaeer"
+}
+
+mukti()
+{
+echo "Good morning sir i am mukti"
+}
+
+yogesh()
+{
+echo "Hi sir i am yogesh"
+}
+
+#calling block 
+$1 
+$2 
+$3 
+$4 
+$5
+
+Backup script : multiple servers 
+
+singup 
+login
+search 
+
+
+
+
+
+
+
+
+
+
+

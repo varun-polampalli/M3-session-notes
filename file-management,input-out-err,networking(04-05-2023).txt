@@ -1,0 +1,181 @@
+Agenda :
+-----------------
+1.File Permissions.
+2.File Compression Formates.
+3.Input,output and Error Redirection.
+4.Networking Commands.
+
+
+User management :
+---------------------
+1.useradd : To create a user
+2.passwd <user-name> : To Attach a password to user
+3.cat /etc/passwd or getent passwd : To display the user file.
+4.su - username : To login as a user.
+5.whoami : To display the username
+6.exit : To logout as a user.
+7.userdel : To delete a user
+
+Group Management :
+------------------------
+1.groupadd : To create a group.
+2.cat /etc/group or getent group : To display the group file.
+3.usermod -a -G group-name user-name
+4.gpasswd -d <user-name> <group-name> : To Remove user from group.
+5.groupdel : To delete a group
+
+1.File Permissions :
+------------------------------
+Read 
+Write 
+Execute 
+
+users/groups/Roles
+---------------------
+1.Owner
+2.Group 
+3.Others
+
+Syntax : chmod 777 file-name
+
+1st 7 : owner
+2nd 7 : Group
+3rd 7 : Others
+
+7 :
+--------
+Read: 4
+write: 2
+Execute: 1
+
+owner : Write and Execute
+Group : Read and write
+Others : Execute 
+
+chmod 361 File-name 
+ -wxrw---x
+----------
+owner : Read and Execute
+Group : Execute and Write
+Others : Read,Write and Execute
+
+chmod 537 File-name
+
+Owner : Read and Write
+Group : Write and Execute
+Others : Read and Execute
+
+-rw--wxr-x
+----------
+rwx
+1st : File/directory
+2-4 : Owner
+5-7 : Group
+8-10 : Others
+
+ls -l : To get a Complete Information about files/directory
+
+Owner : Read and Execute
+Group : Write and Execute
+Others: Read and Write 
+
+File Compression:
+-----------------------
+100 Files : I need to Send all these files to my manager.
+
+30 : pics
+
+By using FIle compression we can store all 100 files in single file and we can Reduce the file sizes.
+
+To share and Store.
+
+1.tar
+2.zip
+3.gzip 
+
+1.tar(tape archive) : 
+
+Compress : tar cvf file.tar file1 file2 file3
+
+            c: Create
+            v: Verbose
+            f: File
+
+Extract : tar xvf file.tar
+
+          x : Extract 
+          v : Verbose
+          f : File
+
+---------------------------------------------------------
+2.zip :
+-----------
+Compress : zip file.zip file1 file2 file3 
+
+Extract : unzip file.zip
+
+3.gzip : 
+
+tar and zip : We added multiple files inside a single file
+
+gzip : We are going compress individual files
+
+Compress : gzip file1 file2 file3
+
+Extract : gzip -d file1.gz file2.gz file3.gz
+
+-------------------------------------------------
+Input,output and Error Redirection :
+-------------------------------------------
+1.Standard Input : <
+
+To Redirect the input to commads
+
+cat < file
+
+2.Standard Output(output Redirection) :
+---------------------------------------------
+To Redirect the outputs
+
+echo Hello world > output.txt
+
+date > date.txt
+
+cal > cal.txt
+
+Note :
+> : Over write
+>> : Append (To store old data along with new data)
+
+
+3.Standard Error (Error Redirection) :
+
+la 2> error.txt
+
+-----------------------------------------------------
+Networking Commands :
+-----------------------------
+1.ping : Pocket Information Gropher
+
+We are going collect the status about server.
+
+To Check the connectivity.
+
+ICMP : Internet control message protocal
+
+2.ifconfig : To collect a information about our system.
+
+3.dig : Domain information Gropher.
+
+dig facebook.com
+
+4.nslookup : To gather the information about Domain.
+
+5.host
+
+6.last : To display the Recent logged information.
+
+7.top : To display the backuground Running System.
+
+8.netstat : To display the information about Network Statics.
+
